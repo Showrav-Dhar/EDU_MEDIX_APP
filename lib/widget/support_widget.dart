@@ -8,6 +8,6 @@ class AppWidget {
 
   static TextStyle lightTextFieldStyle() {
     return TextStyle(
-        color: Colors.black, fontSize: 25, fontWeight: FontWeight.w500);
+        color: Color.fromARGB(103, 0, 0, 0) , fontSize: 25, fontWeight: FontWeight.w500);
   }
 }

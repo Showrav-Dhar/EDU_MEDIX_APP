@@ -2,6 +2,8 @@ import 'package:edu_medix_app/widget/support_widget.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:flutter/widgets.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -37,6 +39,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(244, 255, 255, 255),
       body: Container(
         margin: EdgeInsets.only(top: 70.0, left: 20.0, right: 20.0),
         child: Column(
@@ -77,6 +80,24 @@ class _HomeState extends State<Home> {
                     ))
               ],
             ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Container(
+                padding: EdgeInsets.only(left: 20.0),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                width: MediaQuery.of(context).size.width,
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Search Products",
+                      hintStyle: AppWidget.lightTextFieldStyle(),
+                      suffixIcon:Icon(Icons.search, color:Colors.black),
+                      ),
+                )
+                )
           ],
         ),
       ),
