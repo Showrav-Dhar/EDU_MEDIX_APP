@@ -198,7 +198,7 @@ class CatagoryTile extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 115, 166, 213),
+        color: Color.fromARGB(255, 172, 205, 237),
         borderRadius: BorderRadius.circular(10),
       ),
       // height: 90,
