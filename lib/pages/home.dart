@@ -36,6 +36,26 @@ class _HomeState extends State<Home> {
     });
   }
 
+  List catagories = [
+    "images/catagory/medicine.png",
+    "images/catagory/Oinment.png",
+    "images/catagory/Beverages.png",
+    "images/catagory/Toiletries.png",
+    "images/catagory/Medical_Equipment.png",
+  ];
+
+  List<Map<String, String>> categories = [
+    {"image": "images/catagory/medicine.png", "name": "Medicines"},
+    {"image": "images/catagory/Oinment.png", "name": "Oinment"},
+    {"image": "images/catagory/Beverages.png", "name": "Beverages"},
+    {"image": "images/catagory/Toiletries.png", "name": "Toiletries"},
+    {
+      "image": "images/catagory/Medical_Equipment.png",
+      "name": "Medical Equipment"
+    },
+    // Add more categories as needed
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,22 +104,127 @@ class _HomeState extends State<Home> {
               height: 30.0,
             ),
             Container(
-                padding: EdgeInsets.only(left: 20.0),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 width: MediaQuery.of(context).size.width,
                 child: TextField(
                   decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Search Products",
-                      hintStyle: AppWidget.lightTextFieldStyle(),
-                      suffixIcon:Icon(Icons.search, color:Colors.black),
-                      ),
-                )
-                )
+                    border: InputBorder.none,
+                    hintText: "Search Products",
+                    hintStyle: AppWidget.lightTextFieldStyle(),
+                    prefixIcon: Icon(Icons.search, color: Colors.black),
+                  ),
+                )),
+            SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Catagories", style: AppWidget.semiboldTextFieldStyle()),
+                Text(
+                  "View All",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 224, 53, 110),
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              children: [
+                Container( // All button
+                  height: 100,
+                  margin: EdgeInsets.only(right: 5),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 224, 53, 110),
+                    borderRadius: BorderRadius.circular(10),
+                    
+                  ),
+                  // height: 90,
+                  width: 50,
+                  // child: Image.asset(
+                  //   image,
+                  //   fit: BoxFit.contain, // Ensure the image fits
+                  // ),
+                  child: Center(
+                      child: Text(
+                    "All",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold),
+                  )),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    child: ListView.builder(
+                      padding: EdgeInsets.zero,
+                      itemCount: catagories.length,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        print("Building category tile for index $index");
+                        return CatagoryTile(
+                          image: categories[index]['image']!,
+                          name: categories[index]['name']!,
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ) // show the catagory of products
           ],
         ),
+      ),
+    );
+  }
+}
+
+class CatagoryTile extends StatelessWidget {
+  final String image;
+  final String name;
+
+  CatagoryTile({required this.image, required this.name});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(right: 10),
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 115, 166, 213),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      // height: 90,
+      width: 90,
+      // child: Image.asset(
+      //   image,
+      //   fit: BoxFit.contain, // Ensure the image fits
+      // ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            image,
+            height: 60,
+            width: 60,
+            fit: BoxFit.contain,
+          ),
+          SizedBox(height: 5),
+          Text(
+            name,
+            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ],
       ),
     );
   }
