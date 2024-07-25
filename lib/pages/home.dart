@@ -179,7 +179,92 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ],
-            ) // show the catagory of products
+            ),
+            SizedBox(height: 20.0,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("All Products", style: AppWidget.semiboldTextFieldStyle()),
+                Text(
+                  "View All",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 224, 53, 110),
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
+            SizedBox(height: 30.0,),
+            Container(
+              height: 190,
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(right: 20.0),
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                    child: Column(children: [
+                      Image.asset("images/Oxymeter.jpeg", height: 120,width: 120, fit: BoxFit.cover,),
+                      Text("Oxymeter", style: AppWidget.semiboldTextFieldStyle(),),
+                      Row(
+                        
+                        children: [
+                        Text("\৳১৫০০", style: TextStyle(color: Color.fromARGB(255, 224, 53, 110), fontSize: 22.5, fontWeight: FontWeight.bold),),
+                        SizedBox(width: 20.0,),
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 224, 53, 110), borderRadius: BorderRadius.circular(10) ),
+                          child: Icon(Icons.add, color: Colors.white,))
+                      ],)
+                    ],),
+                  ),
+                  // second product 
+                  Container(
+                    margin: EdgeInsets.only(right: 20.0),
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                    child: Column(children: [
+                      Image.asset("images/blood_pressure_machine.jpeg", height: 120,width: 120, fit: BoxFit.cover,),
+                      Text("BP Checker", style: AppWidget.semiboldTextFieldStyle(),),
+                      Row(
+                        
+                        children: [
+                        Text("\৳৩০০০", style: TextStyle(color: Color.fromARGB(255, 224, 53, 110), fontSize: 22.5, fontWeight: FontWeight.bold),),
+                        SizedBox(width: 20.0,),
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 224, 53, 110), borderRadius: BorderRadius.circular(10) ),
+                          child: Icon(Icons.add, color: Colors.white,))
+                      ],)
+                    ],),
+                  ),
+                  //third product
+                    Container(
+                    margin: EdgeInsets.only(right: 20.0),
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                    child: Column(children: [
+                      Image.asset("images/nebulaizer.webp", height: 120,width: 120, fit: BoxFit.cover,),
+                      Text("Nebulaizer", style: AppWidget.semiboldTextFieldStyle(),),
+                      Row(
+                        
+                        children: [
+                        Text("\৳৪০০০", style: TextStyle(color: Color.fromARGB(255, 224, 53, 110), fontSize: 22.5, fontWeight: FontWeight.bold),),
+                        SizedBox(width: 20.0,),
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 224, 53, 110), borderRadius: BorderRadius.circular(10) ),
+                          child: Icon(Icons.add, color: Colors.white,))
+                      ],)
+                    ],),
+                  ),
+                ],
+              ),
+            )
+            
+            
           ],
         ),
       ),
