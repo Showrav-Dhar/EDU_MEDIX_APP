@@ -1,3 +1,4 @@
+import 'package:edu_medix_app/pages/bottomnav.dart';
 import 'package:edu_medix_app/pages/home.dart';
 import 'package:edu_medix_app/pages/onboarding.dart';
 import 'package:flutter/material.dart';
