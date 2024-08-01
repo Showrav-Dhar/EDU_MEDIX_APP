@@ -1,14 +1,14 @@
 import 'package:edu_medix_app/widget/support_widget.dart';
 import 'package:flutter/material.dart';
 
-class LogIn extends StatefulWidget {
-  const LogIn({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<LogIn> createState() => _LogInState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LogInState extends State<LogIn> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _LogInState extends State<LogIn> {
               ),
               Center(
                 child: Text(
-                  "Sign In",
+                  "Sign Up",
                   style: AppWidget.boldTextFieldStyle(),
                 ),
               ),
@@ -36,6 +36,26 @@ class _LogInState extends State<LogIn> {
                 child: Text(
                   "Please Enter The Details Below\n                To Continue",
                   style: AppWidget.lightTextFieldStyle(),
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Text(
+                "  Name",
+                style: AppWidget.boldTextFieldStyle(),
+              ),
+              SizedBox(
+                height: 5.0,
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 20.0),
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 216, 238, 238),
+                    borderRadius: BorderRadius.circular(20)),
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none, hintText: "Enter Your Name"),
                 ),
               ),
               SizedBox(
@@ -78,24 +98,7 @@ class _LogInState extends State<LogIn> {
                       border: InputBorder.none, hintText: "Password"),
                 ),
               ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "Forgot Password?",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
+              SizedBox(height: 20.0),
               Center(
                 child: Container(
                   width: MediaQuery.of(context).size.width / 2,
@@ -105,7 +108,7 @@ class _LogInState extends State<LogIn> {
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Center(
                       child: Text(
-                    "LOGIN",
+                    "SIGN UP NOW",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 18.0,
@@ -113,16 +116,16 @@ class _LogInState extends State<LogIn> {
                   )),
                 ),
               ),
-              SizedBox(height: 20.0),
-              Row(
+              SizedBox(height:20.0),
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don't Have An Account?  ",
+                    "Already Have An Account?  ",
                     style: AppWidget.lightTextFieldStyle(),
                   ),
                   Text(
-                    "Sign Up",
+                    "Sign In",
                     style: TextStyle(
                         color: Colors.green,
                         fontSize: 20.0,
