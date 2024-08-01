@@ -1,3 +1,4 @@
+import 'package:edu_medix_app/pages/signup.dart';
 import 'package:edu_medix_app/widget/support_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class _LogInState extends State<LogIn> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset("images/LoginPage.png"),
+              Image.asset("images/LoginPhoto.jpg"),
               SizedBox(
                 height: 10.0,
               ),
@@ -121,12 +122,17 @@ class _LogInState extends State<LogIn> {
                     "Don't Have An Account?  ",
                     style: AppWidget.lightTextFieldStyle(),
                   ),
-                  Text(
-                    "Sign Up",
-                    style: TextStyle(
-                        color: Colors.green,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.w500),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                          color: Colors.green,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w500),
+                    ),
                   ),
                 ],
               ),
