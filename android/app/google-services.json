@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "503357130625",
+    "project_id": "edu-medix",
+    "storage_bucket": "edu-medix.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503357130625:android:100440e585f7c582100a80",
+        "android_client_info": {
+          "package_name": "com.example.edu_medix_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwSdfvbbgCHif_suoVAXbfXHo0Fwo1FSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
