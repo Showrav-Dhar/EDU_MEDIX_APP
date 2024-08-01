@@ -37,7 +37,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 Center(
                   child: Image.asset(
                     "images/Oxymeter.jpeg",
-                    height: 400,
+                    height: 200,
                   ),
                 ),
               ],
@@ -64,7 +64,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                           style: AppWidget.boldTextFieldStyle(),
                         ),
                         Text(
-                          "\$300",
+                          "\৳১৫০০",
                           style: TextStyle(
                             color: Color.fromARGB(255, 224, 53, 110),
                             fontSize: 23.0,
@@ -73,23 +73,36 @@ class _ProductDetailsState extends State<ProductDetails> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20.0,),
+                    SizedBox(
+                      height: 20.0,
+                    ),
                     Text(
                       "Details",
                       style: AppWidget.semiboldTextFieldStyle(),
                     ),
-                    SizedBox(height: 10.0,),
-                    Text("An oximeter is a medical device used to measure blood oxygen saturation (SpO2) and pulse rate. It's commonly clipped onto a finger, providing quick, non-invasive readings for monitoring respiratory health."),
-                    SizedBox(height: 90.0,),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Text(
+                        "Color OLED display, SpO2 and pulse monitoring, and waveform display, low voltage alarm display, auto power-off, accurate readings of blood oxygen saturation and pulse rate."),
+                    SizedBox(
+                      height: 90.0,
+                    ),
                     Container(
                       padding: EdgeInsets.symmetric(vertical: 10.0),
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 224, 53, 110), borderRadius: BorderRadius.circular(10)
-                      ),
+                          color: Color.fromARGB(255, 224, 53, 110),
+                          borderRadius: BorderRadius.circular(10)),
                       width: MediaQuery.of(context).size.width,
-                      child: Center(child: Text("Buy Now", style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold),)),
+                      child: Center(
+                          child: Text(
+                        "Buy Now",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold),
+                      )),
                     )
-
                   ],
                 ),
               ),
