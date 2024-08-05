@@ -4,9 +4,12 @@ import 'package:edu_medix_app/pages/login.dart';
 import 'package:edu_medix_app/pages/onboarding.dart';
 import 'package:edu_medix_app/pages/product_detail.dart';
 import 'package:edu_medix_app/pages/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
