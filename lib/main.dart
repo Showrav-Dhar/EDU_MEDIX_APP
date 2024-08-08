@@ -4,12 +4,21 @@ import 'package:edu_medix_app/pages/login.dart';
 import 'package:edu_medix_app/pages/onboarding.dart';
 import 'package:edu_medix_app/pages/product_detail.dart';
 import 'package:edu_medix_app/pages/signup.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  // comment the below function to run on android without firebase
+  // await Firebase.initializeApp(
+  //   options: FirebaseOptions(
+  //     apiKey: "AIzaSyAlFuUhx6v-ehXw9Pvg4OoVIUd4ahAoHNE",
+  //     appId: "com.example.eduMedixApp",
+  //     messagingSenderId: "503357130625",
+  //     projectId: "edu-medix",
+  //   ),
+  // );
+  
   runApp(const MyApp());
 }
 
